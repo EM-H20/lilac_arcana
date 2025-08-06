@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
               return SingleChildScrollView(
                 padding: EdgeInsets.all(16.w),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // 제목
                     Text(
@@ -126,36 +126,42 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     SizedBox(height: 20.h),
-                    
+
                     // 선천수 (음력)
                     TarotCardPairWidget(
                       title: '선천수 (음력)',
                       lifeCard: provider.innateLifeNumberCard,
                       shadowCard: provider.innateShadowCard,
-                      onLifeCardTap: (card) => context.push('/card-info/${card.number}'),
-                      onShadowCardTap: (card) => context.push('/card-info/${card.number}'),
+                      onLifeCardTap:
+                          (card) => context.push('/card-info/${card.number}'),
+                      onShadowCardTap:
+                          (card) => context.push('/card-info/${card.number}'),
                     ),
-                    
+
                     // 후천수 (양력)
                     TarotCardPairWidget(
                       title: '후천수 (양력)',
                       lifeCard: provider.acquiredLifeNumberCard,
                       shadowCard: provider.acquiredShadowCard,
-                      onLifeCardTap: (card) => context.push('/card-info/${card.number}'),
-                      onShadowCardTap: (card) => context.push('/card-info/${card.number}'),
+                      onLifeCardTap:
+                          (card) => context.push('/card-info/${card.number}'),
+                      onShadowCardTap:
+                          (card) => context.push('/card-info/${card.number}'),
                     ),
-                    
+
                     // 직업수
                     TarotCardPairWidget(
                       title: '직업수',
                       lifeCard: provider.vocationLifeNumberCard,
                       shadowCard: provider.vocationShadowCard,
-                      onLifeCardTap: (card) => context.push('/card-info/${card.number}'),
-                      onShadowCardTap: (card) => context.push('/card-info/${card.number}'),
+                      onLifeCardTap:
+                          (card) => context.push('/card-info/${card.number}'),
+                      onShadowCardTap:
+                          (card) => context.push('/card-info/${card.number}'),
                     ),
-                    
+
                     SizedBox(height: 20.h),
-                    
+
                     // 다시 계산 버튼
                     SizedBox(
                       width: double.infinity,
